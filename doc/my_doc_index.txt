@@ -1,0 +1,20 @@
+*my_cheatsheet_index.txt*  my sheatsheet index.
+						      
+==============================================================================
+my_index					*my_index*
+
+editors:~
+vim_cheatsheet			  	         |vim_cheatsheet.txt|
+emacs_cheatsheet			       |emacs_cheatsheet.txt|
+
+
+tools:~
+git_cheatsheet				         |git_cheatsheet.txt|
+vimwiki_cheatsheet			     |vimwiki_cheatsheet.txt|
+
+
+languages:~
+bash_cheatsheet			                |bash_cheatsheet.txt|
+
+==============================================================================
+ vim:tw=78:isk=!-~,^*,^\|,^\":ts=8:noet:ft=help:norl:

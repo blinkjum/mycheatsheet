@@ -1,0 +1,147 @@
+*vimwiki_cheatsheet.txt*  vimwiki cheatsheet.
+						      
+==============================================================================
+# Open wiki
+==============================================================================
+n\ww . . . . . . . . . . . . . . . . . . . . .Open index file of the n-th wiki
+n\wt . . . . . . . . . . . . . . . . . . . . . . . . .Open index file in a tab
+\ws . . . . . . . . . . . . . . . . . . . . . List and select available wikies
+
+
+==============================================================================
+# Local mappings
+==============================================================================
+Enter  . . . . . . . . . . . . . . . . . . . . . . . . .Follow/Create WikiWord
+Shift+Enter  . . . . . . .  . .. . . . . . . .Split and follow/create WikiWord
+Ctrl+Enter  . . . . . . . . . . . . .Vertical split and follow/create WikiWord
+Backspace. . . . . . . . . . . . . . . . . . . . .Go back to previous WikiWord
+Tab . . . . . . . . . . . . . . . . . . . . . . . . . . . . Find next WikiWord
+Shift-Tab . . . . . . . . . . . . . . . . . . . . . . . Find previous WikiWord
+\wd . . . . . . . . . . . . . . . . . . . . . . . . Delete WikiWord you are in
+\wr . . . . . . . . . . . . . . . . . . . . . . . . Rename WikiWord you are in
+Ctrl-Space . . . . . . . . . . . . . . . . . . . . . . Toggle list item on/off
+= . . . . . . . . . . . . . . . . . . . . . . . . . Add or create header level
+-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . Remove header level
+
+
+==============================================================================
+# Syntax
+==============================================================================
+*text*  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .bold text
+text . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . italic text
+~~text~~  . . . . . . . . . . . . . . . . . . . . . . . . . . . strikeout text
+^text^ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . superscript
+,,text,, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . subscript
+`code`  . . . . . . . . . . . . . . . . . . . . . . . . . .text without syntax
+4 Spaces text. . . . . . . . . . . . . . . . . . . . . . . . . blockquote text
+---- . . . . . . . . . . . . . . . . . . . . . . . . . . . . . horizontal line
+<!-- text --> . . . . . . . . . . . . . . . . . . . comment: not shown in HTML
+= text =  . . . . . . . . . . . . . . . . . . . . . . . . . . . header level 1
+== text ==  . . . . . . . . . . . . . . . . . . . . . . . . . . header level 2
+=== text ===  . . . . . . . . . . . . . . . . . . . . . . . . . header level 3
+==== text ====  . . . . . . . . . . . . . . . . . . . . . . . . header level 4
+===== text =====  . . . . . . . . . . . . . . . . . . . . . . . header level 5
+====== text ======  . . . . . . . . . . . . . . . . . . . . . . header level 6
+
+==============================================================================
+# Lists
+# Indent list items with at least one space.
+==============================================================================
+* item . . . . . . . . . . . . . . . . . . . . . . . . . . . . . bulleted list
+# item  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .numbered list
+term:: definition  . . . . . . . . . . . . . . . . . . . . . . definition list
+
+
+==============================================================================
+# Text objects
+==============================================================================
+ah . . . . . . . . . . . . . . . . . . . . . A header with leading empty lines
+ih . . . . . . . . . . . . . . . . . .Inner header without leading empty lines
+vah . . . . . . . . . . . . . . . . . . . . . . . .Select header with contents
+dah . . . . . . . . . . . . . . . . . . . . . . . .Delete header with contents
+yah . . . . . . . . . . . . . . . . . . . . . . . .Change header with contents
+
+
+==============================================================================
+Internal Links
+==============================================================================
+TextText . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .WikiWord
+!TextText . . . . . . . . . . . . . . . . . . . . . . . . . . . Not a WikiWord
+[[Text text]] . . . . . . . . . . . . . . . . . . . . . . . . Link with spaces
+[[Text text | Text]] . . . . . . . . . . . . . . . . . . Link with description
+
+
+==============================================================================
+External links
+==============================================================================
+plain link: . . . . . . . . . . . . . . . . . . . . . . . . . . . http://site/
+link with description . . . . . . . . . . . . . . . . [http://site/ home page]
+plain link to image . . . . . . . . . . . . . . . . . . . .http://site/pic.jpg
+link to local image . . . . . . . . . . . . . . . . . . . .[[images/pic.jpg]]1
+double bracketed link . . . . . . . . . . . . . . . . .[[http://site/pic.jpg]]
+link with description . . . . . . . . . . . . . . . . . . . .[[http:|comment]]
+link with alternate text . . . . . . . . . . . . . . . . . .[[http:|comment|]]
+link to local file . . . . . . . . . . . . . . . . . . .[[file://C:/book.pdf]]
+
+links with some style:
+    with alternate text:
+    [[http:|cool|width:150px; height:120px;]]
+    without alternate text:
+    [[http:||width:150px; height:120px;]]
+thumnail links:
+    [http://site/pic.jpg http://site/thumb.jpg]
+    [[http://site/pic.jpg|http://site/thumb.jpg]]
+
+==============================================================================
+Paragraphs and Preformatted text
+==============================================================================
+<br>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . new line
+Paragraphs start from column one, no indentation and
+are divide by a blank line. If the line starts from whitespace
+and is not a list it is ”preformatted” text.
+
+
+==============================================================================
+Tables
+==============================================================================
+|| . . . . . . . . . . . . . . . . . . . . . . . . . . . . .Separator of cells
+|--+--+--| . . . . . . . . . . . . . . . . . . . . . . . . . Heading separator
+Alt+Left . . . . . . . . . . . . . . . . . . . . . . . . . . Shift column left
+Alt+Right . . . . . . . . . . . . . . . . . . . . . . . . . Shift column right
+Tab / Shift+Tab . . . . . . . . . . . . . . . Jump to the next / previous cell
+An indented table is centered in HTML.
+
+
+==============================================================================
+Folding/Outline
+==============================================================================
+zM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . close all folds
+zr . . . . . . . . . . . . . . . . . . . . . . . . . .reduce folding one level
+zR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .open all folds
+Folding on list items should work properly only if all of them are indented 
+using current shiftwidth.
+
+
+==============================================================================
+Global commands
+==============================================================================
+:VimwikiGoHome . . . . . . . . . . . . . . . . . . .Open index of current wiki
+:VimwikiTabGoHome . . . . . . . . . . . . . . . .Open current index in new tab
+:VimwikiUISelect . . . . . . . .Open index of the selected wiki Local commands
+:VimwikiFollowWord . . . . . . . . . . . . . . . . . . .Follow/create WikiWord
+:VimwikiSplitWord . . . . . . . . . . . . . . . Split & follow/create WikiWord
+:VimwikiVSplitWord . . . . . . . . . . . . . .Split vertical & follow WikiWord
+:VimwikiGoBackWord . . . . . . . . . . . . . . . . . To WikiWord you came from
+:VimwikiNextWord . . . . . . . . . . . . . . . . . . . . . .Find next WikiWord
+:VimwikiPrevWord . . . . . . . . . . . . . . . . . . . .Find previous WikiWord
+:VimwikiDeleteWord . . . . . . . . . . . . . . . . .Delete WikiWord you are in
+:VimwikiRenameWord . . . . . . . . . . . . . . . . .Rename WikiWord you are in
+:Vimwiki2HTML . . . . . . . . . . . . . . . . Convert current WikiPage to HTML
+:VimwikiAll2HTML . . . . . . . . . . . . . . . . Convert all WikiPages to HTML
+:VimwikiToggleListItem . . . . . . . . . . . . . . . . Toggle list item on/off
+:VimwikiTableMoveColumnLeft . . . . . . . . . . . . . . . . .Shift column left
+:VimwikiTableMoveColumnRight . . . . . . . . . . . . . . . .Shift column right
+
+
+==============================================================================
+ vim:tw=78:isk=!-~,^*,^\|,^\":ts=8:noet:ft=help:norl:
